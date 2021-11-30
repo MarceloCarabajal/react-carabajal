@@ -1,0 +1,17 @@
+Node.js: Un entorno de desarrollo
+NPM: Node Package Manager
+
+WEBPACK: Bundler
+BABEL: Transpilador
+create-react-app: Crea una aplicacion de react
+
+Instalar programas auxiliares
+
+1) Instalo Node
+2) Instalo create-react-app (npm i -g create-react-app)
+
+3) Ejecuto create-react-app (create-react-app <nombre>)
+
+
+
+
