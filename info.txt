@@ -12,6 +12,24 @@ Instalar programas auxiliares
 
 3) Ejecuto create-react-app (create-react-app <nombre>)
 
+JSX: Es una extension de JS que permite crear componentes de forma sencilla
+parecida a HTML
+
+COMOPONENTES: Una funcion que siempre tiene un solo retorno, ya que su funcion principal Es
+dibujar un elemento en pantalla y todos arrancan en mayuscula
+
+- State
+- Props
+- Ciclo de vida
+- Metodos de ciclo de vida
 
 
+
+
+
+
+
+const arr = [1,2,3]
+
+arr.map(()=>{})
 

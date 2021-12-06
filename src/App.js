@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Container } from 'react-bootstrap';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 
@@ -6,10 +6,10 @@ import ItemListContainer from './components/ItemListContainer';
 
 function App() {
   return (
-   <Fragment>
+   <Container fluid> 
       <NavBar />
       <ItemListContainer greeting="Bienvenido a MStar!"/>
-   </Fragment>
+   </Container>
   );
 }
 
