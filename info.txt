@@ -18,10 +18,16 @@ parecida a HTML
 COMOPONENTES: Una funcion que siempre tiene un solo retorno, ya que su funcion principal Es
 dibujar un elemento en pantalla y todos arrancan en mayuscula
 
-- State
-- Props
+
+- Props: son parametros de una funcion
+- State: Son variables internas de un componente que si las modifico el componente se actualiza
 - Ciclo de vida
 - Metodos de ciclo de vida
+
+HOOKS: Son funciones.
+- useState: 
+
+            useState()
 
 
 

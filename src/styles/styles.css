@@ -25,3 +25,16 @@ html, body {
     align-items: center;
     align-content: center;
 }
+
+
+.icon-cart {
+    display: flex;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}

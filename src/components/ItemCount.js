@@ -1,10 +1,10 @@
 import { useState, UseEffect } from "react";
-
+import { Card, Button } from 'react-bootstrap';
 
 
 const ItemCount = () => {
 
-    const stock = 10;
+    let stock = 10;
     const [count, setCount] = useState(0);
 
 
@@ -21,6 +21,12 @@ const ItemCount = () => {
         }
     };
 
+    const agregarCarrito = () => {
+        if (count > 0) {
+            stock = stock - count;
+            setCount(0);
+        }
+    }
 
     
 
@@ -28,21 +34,22 @@ const ItemCount = () => {
 
         
         <>
-            <article className="box-item-count">
-
-            </article>
-        
-            <button onClick={restar}>
-                <span className="material-icons">
-                    remove
-                </span>
-            </button>
-            <h3>{count}</h3>
-            <button onClick={sumar}>
-                <span className="material-icons">
-                    add
-                </span>
-            </button>
+            <Card style={{ width: '18rem' }}>
+            <Card.Img variant="top" src="https://via.placeholder.com/100x50" />
+                <Card.Body>
+                    <Card.Title>Producto "X"</Card.Title>
+                    <Card.Text>
+                        descripción del producto
+                    </Card.Text>
+                    <h3>{count}</h3>
+                    <div>
+                        <Button variant="dark" onClick={sumar}>+</Button>
+                        <Button variant="dark" onClick={restar}>-</Button>
+                    </div>      
+                    <br></br><br></br>
+                    <Button variant="dark" onClick={agregarCarrito}>Agregar al carrito</Button>
+                </Card.Body>
+            </Card>
            
 
         </>
