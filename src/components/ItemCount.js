@@ -1,12 +1,13 @@
-import { useState, UseEffect } from "react";
+import { useState, Fragment } from "react";
 import { Card, Button } from 'react-bootstrap';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const ItemCount = () => {
 
     let stock = 10;
     const [count, setCount] = useState(0);
-
 
 
     const sumar = () => {
@@ -23,6 +24,7 @@ const ItemCount = () => {
 
     const agregarCarrito = () => {
         if (count > 0) {
+            toast.info('Agregando al carrito');
             stock = stock - count;
             setCount(0);
         }
@@ -30,10 +32,8 @@ const ItemCount = () => {
 
     
 
-    return (
-
-        
-        <>
+    return (   
+        <Fragment>
             <Card style={{ width: '18rem' }}>
             <Card.Img variant="top" src="https://via.placeholder.com/100x50" />
                 <Card.Body>
@@ -43,16 +43,27 @@ const ItemCount = () => {
                     </Card.Text>
                     <h3>{count}</h3>
                     <div>
-                        <Button variant="dark" onClick={sumar}>+</Button>
                         <Button variant="dark" onClick={restar}>-</Button>
+                        <Button variant="dark" onClick={sumar}>+</Button>
                     </div>      
                     <br></br><br></br>
                     <Button variant="dark" onClick={agregarCarrito}>Agregar al carrito</Button>
-                </Card.Body>
+                    <ToastContainer
+                    position="top-right"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover 
+                    />
+                    {/* Same as */}
+                    <ToastContainer />
+                    </Card.Body>
             </Card>
-           
-
-        </>
+        </Fragment>
             
     );
 }

@@ -6,7 +6,7 @@ const ItemListContainer = (props) => {
 
     return (
         <Fragment>
-            <p>{props.greeting}</p>
+            <p className="saludoIni">{props.greeting}</p>
             <ItemCount />
         </Fragment>
     )

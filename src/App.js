@@ -4,11 +4,13 @@ import ItemListContainer from './components/ItemListContainer';
 
 
 
+
 function App() {
   return (
    <Container fluid> 
       <NavBar />
       <ItemListContainer greeting="Bienvenido a MStar!"/>
+    
    </Container>
   );
 }
