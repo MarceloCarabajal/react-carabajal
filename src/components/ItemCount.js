@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const ItemCount = () => {
 
     let stock = 10;
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(1);
 
 
     const sumar = () => {
@@ -17,7 +17,7 @@ const ItemCount = () => {
     };
 
     const restar = () => {
-        if (count > 0) {
+        if (count > 1) {
             setCount(count - 1);
         }
     };
@@ -26,7 +26,7 @@ const ItemCount = () => {
         if (count > 0) {
             toast.info('Agregando al carrito');
             stock = stock - count;
-            setCount(0);
+            setCount(1);
         }
     }
 

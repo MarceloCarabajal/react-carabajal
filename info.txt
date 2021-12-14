@@ -24,10 +24,21 @@ dibujar un elemento en pantalla y todos arrancan en mayuscula
 - Ciclo de vida
 - Metodos de ciclo de vida
 
+mount
+
+update
+-render
+-shouldComponentUpdate
+
+unmount
+-componentWillUnmount
+
 HOOKS: Son funciones.
 - useState: 
 
             useState()
+
+            useEffect(a,b)
 
 
 

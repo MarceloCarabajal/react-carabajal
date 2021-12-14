@@ -44,3 +44,7 @@ html, body {
     align-items: center;
     align-content: center;
 }
+
+.listaUsuarios {
+    color: white;
+}
