@@ -48,3 +48,26 @@ html, body {
 .listaUsuarios {
     color: white;
 }
+
+.contador {
+    border-style: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+.itemCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px #000;
+}

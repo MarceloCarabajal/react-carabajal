@@ -1,11 +1,11 @@
 [
-    {"id":1, "destacado": true, "nombre": "Monitor", "img": "https://via.placeholder.com/150"},
-    {"id":2, "destacado": false,"nombre": "Placa de sonido", "img": "https://via.placeholder.com/150"},
-    {"id":3, "destacado": true, "nombre": "Procesador", "img": "https://via.placeholder.com/150"},
-    {"id":4, "destacado": false,"nombre": "Memoria RAM", "img": "https://via.placeholder.com/150"},
-    {"id":5, "destacado": true, "nombre": "Placa de video", "img": "https://via.placeholder.com/150"},
-    {"id":6, "destacado": false,"nombre": "Placa madre", "img": "https://via.placeholder.com/150"},
-    {"id":7, "destacado": true, "nombre": "Placa de red", "img": "https://via.placeholder.com/150"},
-    {"id":8, "destacado": false,"nombre": "Placa de sonido", "img": "https://via.placeholder.com/150"},
-    {"id":9, "destacado": true, "nombre": "Batería", "img": "https://via.placeholder.com/150"}
+    {"id":1, "destacado": true, "nombre": "Monitor", "precio":100, "img": "https://via.placeholder.com/150"},
+    {"id":2, "destacado": false,"nombre": "Placa de sonido", "precio":100, "img": "https://via.placeholder.com/150"},
+    {"id":3, "destacado": true, "nombre": "Procesador", "precio":100, "img": "https://via.placeholder.com/150"},
+    {"id":4, "destacado": false,"nombre": "Memoria RAM", "precio":100, "img": "https://via.placeholder.com/150"},
+    {"id":5, "destacado": true, "nombre": "Placa de video", "precio":100, "img": "https://via.placeholder.com/150"},
+    {"id":6, "destacado": false,"nombre": "Placa madre", "precio":100, "img": "https://via.placeholder.com/150"},
+    {"id":7, "destacado": true, "nombre": "Placa de red", "precio":100, "img": "https://via.placeholder.com/150"},
+    {"id":8, "destacado": false,"nombre": "Placa de sonido", "precio":100, "img": "https://via.placeholder.com/150"},
+    {"id":9, "destacado": true, "nombre": "Batería", "precio":100, "img": "https://via.placeholder.com/150"}
 ]

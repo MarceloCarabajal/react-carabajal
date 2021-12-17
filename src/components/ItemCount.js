@@ -25,7 +25,6 @@ const ItemCount = () => {
     const agregarCarrito = () => {
         if (count > 0) {
             toast.info('Agregando al carrito');
-            stock = stock - count;
             setCount(1);
         }
     }
@@ -34,35 +33,28 @@ const ItemCount = () => {
 
     return (   
         <Fragment>
-            <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="https://via.placeholder.com/100x50" />
-                <Card.Body>
-                    <Card.Title>Producto "X"</Card.Title>
-                    <Card.Text>
-                        descripción del producto
-                    </Card.Text>
-                    <h3>{count}</h3>
-                    <div>
-                        <Button variant="dark" onClick={restar}>-</Button>
-                        <Button variant="dark" onClick={sumar}>+</Button>
-                    </div>      
-                    <br></br><br></br>
-                    <Button variant="dark" onClick={agregarCarrito}>Agregar al carrito</Button>
-                    <ToastContainer
-                    position="top-right"
-                    autoClose={5000}
-                    hideProgressBar={false}
-                    newestOnTop={false}
-                    closeOnClick
-                    rtl={false}
-                    pauseOnFocusLoss
-                    draggable
-                    pauseOnHover 
-                    />
-                    {/* Same as */}
-                    <ToastContainer />
-                    </Card.Body>
+
+            <Card className="contador">
+                <Button variant="dark" onClick={restar}>-</Button>
+                <Card.Body>{count}</Card.Body>    
+                <Button Classname="btn-toolbar" variant="dark" onClick={sumar}>+</Button>
             </Card>
+            <br></br>
+
+            <Button variant="dark" onClick={agregarCarrito}>Agregar al carrito</Button>
+            <ToastContainer
+            position="top-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover 
+            />
+            {/* Same as */}
+            <ToastContainer />
         </Fragment>
             
     );
