@@ -1,7 +1,6 @@
 import { Container, Card } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import ItemCount from "./ItemCount";
 
 const Item = (props) => {
 
@@ -18,10 +17,8 @@ const Item = (props) => {
                             </Card.Text>
                             <Card.Text>
                                 Precio: ${props.precio}
-                            </Card.Text>
-                            
-                            </Card.Body>
-                            <ItemCount />
+                            </Card.Text>    
+                        </Card.Body>
                         </Card>
                     </Col>
                 </Row>

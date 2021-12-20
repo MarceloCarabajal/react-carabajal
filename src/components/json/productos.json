@@ -1,11 +1,11 @@
 [
-    {"id":1, "destacado": true, "nombre": "Monitor", "precio":100, "img": "https://via.placeholder.com/150"},
-    {"id":2, "destacado": false,"nombre": "Placa de sonido", "precio":100, "img": "https://via.placeholder.com/150"},
-    {"id":3, "destacado": true, "nombre": "Procesador", "precio":100, "img": "https://via.placeholder.com/150"},
-    {"id":4, "destacado": false,"nombre": "Memoria RAM", "precio":100, "img": "https://via.placeholder.com/150"},
-    {"id":5, "destacado": true, "nombre": "Placa de video", "precio":100, "img": "https://via.placeholder.com/150"},
-    {"id":6, "destacado": false,"nombre": "Placa madre", "precio":100, "img": "https://via.placeholder.com/150"},
-    {"id":7, "destacado": true, "nombre": "Placa de red", "precio":100, "img": "https://via.placeholder.com/150"},
-    {"id":8, "destacado": false,"nombre": "Placa de sonido", "precio":100, "img": "https://via.placeholder.com/150"},
-    {"id":9, "destacado": true, "nombre": "Batería", "precio":100, "img": "https://via.placeholder.com/150"}
+    {"id":1, "destacado": true, "nombre": "Monitor", "precio":100, "img": "https://via.placeholder.com/150","descripcion": "descripcion de monitor, descripcion de monitor"},
+    {"id":2, "destacado": false,"nombre": "Placa de sonido", "precio":200, "img": "https://via.placeholder.com/150","descripcion": "descripcion de placa de sonido, descripcion de placa de sonido"},
+    {"id":3, "destacado": true, "nombre": "Procesador", "precio":300, "img": "https://via.placeholder.com/150","descripcion": "descripcion de procesador, descripcion de procesador"},
+    {"id":4, "destacado": false,"nombre": "Memoria RAM", "precio":400, "img": "https://via.placeholder.com/150" ,"descripcion": "descripcion de ram, descripcion de ram"},
+    {"id":5, "destacado": true, "nombre": "Placa de video", "precio":500, "img": "https://via.placeholder.com/150","descripcion": "descripcion de placa de video, descripcion de placa de video"},
+    {"id":6, "destacado": false,"nombre": "Placa madre", "precio":600, "img": "https://via.placeholder.com/150","descripcion": "descripcion de placa madre, descripcion de placa madre"},
+    {"id":7, "destacado": true, "nombre": "Placa de red", "precio":700, "img": "https://via.placeholder.com/150","descripcion": "descripcion de placa de red, descripcion de placa de red"},
+    {"id":8, "destacado": false,"nombre": "Placa de sonido", "precio":800, "img": "https://via.placeholder.com/150","descripcion": "descripcion de placa de sonido, descripcion de placa de sonido"},
+    {"id":9, "destacado": true, "nombre": "Batería", "precio":900, "img": "https://via.placeholder.com/150","descripcion": "descripcion de bateria, descripcion de bateria"}
 ]

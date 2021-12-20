@@ -1,8 +1,8 @@
 import { Container } from 'react-bootstrap';
-import NavBar from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer';
+import NavBar from './components/header/NavBar';
+import ItemListContainer from './components/itemList/ItemListContainer';
 import PruebaFetch from './components/PruebaFetch';
-import ItemDetailContainer from './components/ItemDetailContainer';
+import ItemDetailContainer from './components/itemDetail/ItemDetailContainer';
 
 
 
@@ -12,7 +12,7 @@ function App() {
    <Container fluid> 
       <NavBar />
       <ItemListContainer greeting="Bienvenido a MStar!"/>
- 
+      <ItemDetailContainer />
       <PruebaFetch />
         
    </Container>

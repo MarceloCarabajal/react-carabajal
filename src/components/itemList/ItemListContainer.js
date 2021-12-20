@@ -1,7 +1,6 @@
 import { Fragment, useState, useEffect} from "react";
-
 import ItemList from "./ItemList";
-import products from "./json/productos.json";
+import products from "../json/productos.json";
 
 
 const ItemListContainer = (props) => {
