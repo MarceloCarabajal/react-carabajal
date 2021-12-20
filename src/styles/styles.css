@@ -13,7 +13,6 @@ html, body {
     color: white;   
 }
 
-
 .navbar-light .navbar-brand {
     color: #fff;
 }
@@ -24,12 +23,7 @@ html, body {
 
 
 .navbar-expand-lg .navbar-collapse {
-    display: flex !important;
-    flex-direction: row;
-    flex-wrap: nowrap;
     justify-content: flex-end;
-    align-items: center;
-    align-content: center;
 }
 
 
@@ -37,45 +31,34 @@ html, body {
     display: flex;
 }
 
+
 .card-body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    align-content: center;
 }
 
-.listaUsuarios {
-    color: white;
+.itemCard {
+    margin: 1rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px #656361;
 }
+
 
 .contador {
     border-style: hidden;
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
     align-content: center;
+    width: 150px;
     }
 
-
-
-.itemCard {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    margin: 1rem;
-    padding: 1rem;
-    border-radius: 1rem;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px #000;
+.contador p {
+    margin-bottom: 0;
+    color: #fff;
 }
 
-.itemList {
 
-
-}
-
-.itemDetailContainer{
-    width: 100%;
-}

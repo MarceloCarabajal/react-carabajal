@@ -26,10 +26,12 @@ const ItemDetailContainer = () => {
 
   
 
+
   
 
 
   return <ItemDetail prod={selected}/>
+
 };
 
 export default ItemDetailContainer;

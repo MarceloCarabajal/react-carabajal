@@ -11,7 +11,7 @@ function App() {
   return (
    <Container fluid> 
       <NavBar />
-      <ItemListContainer greeting="Bienvenido a MStar!"/>
+      <ItemListContainer greeting="Bienvenido a MStar, Servicios informáticos."/>
       <ItemDetailContainer />
       <PruebaFetch />
         

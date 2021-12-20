@@ -5,8 +5,7 @@ import Col from 'react-bootstrap/Col'
 const Item = (props) => {
 
     return (
-            <Container fluid>
-                <Row md={3}>
+            
                     <Col>
                         <Card className = "itemCard"style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={props.img} alt={props.nombre} />
@@ -21,8 +20,6 @@ const Item = (props) => {
                         </Card.Body>
                         </Card>
                     </Col>
-                </Row>
-            </Container>
             
 
     )
