@@ -1,5 +1,5 @@
 import Item from './Item'
-import { Row, Col } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 
 const ItemList = (props) => {
 

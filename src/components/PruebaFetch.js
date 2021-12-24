@@ -1,4 +1,3 @@
-
 const PruebaFetch = () => {
 
     const resultado = fetch('https://pokeapi.co/api/v2/pokemon/')
