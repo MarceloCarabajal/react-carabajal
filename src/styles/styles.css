@@ -13,23 +13,9 @@ html, body {
     color: white;   
 }
 
-.navbar-light .navbar-brand {
-    color: #fff;
-}
-
-.navbar-light .navbar-nav .nav-link {
-    color: #fff;
-}
 
 
-.navbar-expand-lg .navbar-collapse {
-    justify-content: flex-end;
-}
 
-
-.icon-cart {
-    display: flex;
-}
 
 
 .card-body {
@@ -61,6 +47,56 @@ html, body {
     color: #fff;
 }
 
-.navbar-dark .navbar-nav .nav-link {
-    color: rgba(255,255,255,.5);
+
+.nav-enlace {
+    display: inline-block;
+    background-color: black;
+    color: grey;
+    padding: 10px 30px;
+    text-decoration: none;
+}
+
+.nav-enlace:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+}
+
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+    .nav-enlace {
+        margin-bottom: 10px;
+    }
+    .nav-button {
+        color: grey;
+        background-color: black;
+        padding: 10px 30px;
+        text-decoration: none;
+
+    }
+}
+
+@media (min-width: 768px) {
+    .nav-button {
+        display: none;
+    }
+}
+
+.icon-cart {
+    display: inline-block;
+    color: grey;
+    text-decoration: none;
+}
+
+.icon-cart:hover {
+    color: #fff;
 }

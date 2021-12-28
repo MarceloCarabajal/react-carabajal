@@ -1,11 +1,15 @@
 import { Fragment, useState, useEffect} from "react";
 import ItemList from "./ItemList";
 import products from "../json/productos.json";
+import { useParams } from "react-router-dom";
 
 
 const ItemListContainer = (props) => {
 
     const [productos, setProductos] = useState([]);
+
+    const { id } = useParams ();
+    console.log(id);
 
     const Promesa = () => {
         return new Promise ((resolve, reject) => {

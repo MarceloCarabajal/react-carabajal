@@ -1,5 +1,4 @@
 import { useState, Fragment } from "react";
-import { Button } from 'react-bootstrap';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -34,14 +33,14 @@ const ItemCount = (props) => {
 
 
            <div className="contador">
-           <Button variant="dark" onClick={restar}>-</Button>
+           <button onClick={restar}>-</button>
             <p>{count}</p>    
-            <Button Classname="btn-toolbar" variant="dark" onClick={sumar}>+</Button>
+            <button Classname="btn-toolbar" onClick={sumar}>+</button>
            </div>
 
            
             <br></br>
-            <Button variant="dark" onClick={agregarCarrito}>Agregar al carrito</Button>
+            <button onClick={agregarCarrito}>Agregar al carrito</button>
             <ToastContainer
             position="top-right"
             autoClose={5000}
