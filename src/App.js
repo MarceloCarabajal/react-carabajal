@@ -16,9 +16,9 @@ function App() {
       <div className="container-fluid">
       <Routes>
         <Route path= "/" element= {<Home />} />
-        <Route path= "/productos" element={<ItemListContainer />}/>
+        <Route path= "/productos" element={<ItemListContainer greeting="Bienvenido a MStar" />}/>
         <Route path= "/producto" element={<ItemDetailContainer />} />
-        <Route path= "/categoria/:id" element= {<ItemListContainer />}/>
+        <Route path= "/categoria/:id" element= {<ItemListContainer greeting="Bienvenido a MStar"  />}/>
         <Route path= "/contacto" element={<Contact />}/>
         <Route path= "/carrito" element={<Cart />}/>
         <Route path= "*" />
