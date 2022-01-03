@@ -1,15 +1,13 @@
 import { useState, Fragment } from "react";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 
-const ItemCount = (props) => {
+const ItemCount = ({stock, initial, onAdd, addFail}) => {
 
-    const [count, setCount] = useState(props.initial);
+    const [count, setCount] = useState(initial);
 
 
     const sumar = () => {
-        if (count < props.stock) {
+        if (count < stock) {
             setCount(count + 1);
         }
     };
@@ -21,40 +19,25 @@ const ItemCount = (props) => {
     };
 
     const agregarCarrito = () => {
-        if (count > 0) {
-            toast.info('Items agregados al carrito: ' + count);
-            setCount(1);
+        if (count <= stock) {
+            onAdd(count);
+            setCount(initial);
+        }
+        else {
+            addFail();
         }
     }
     
 
     return (   
-        <Fragment>
-
-
-           <div className="contador">
-           <button onClick={restar}>-</button>
-            <p>{count}</p>    
-            <button className="btn-toolbar" onClick={sumar}>+</button>
-           </div>
-
-           
-            <br></br>
-            <button onClick={agregarCarrito}>Agregar al carrito</button>
-            <ToastContainer
-            position="top-right"
-            autoClose={5000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover 
-            />
-        
-            <ToastContainer />
-        </Fragment>
+        <div className="contador">
+            <span>{count}</span>
+            <div>
+                <button onClick={restar}>-</button> 
+                <button onClick={agregarCarrito}>Agregar al carrito</button>
+                <button onClick={sumar}>+</button>
+            </div>
+        </div>
             
     );
 }
