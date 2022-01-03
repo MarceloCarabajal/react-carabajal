@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom"
 
 const Item = (props) => {
+    console.log(props);
 
     return (            
     
@@ -10,7 +11,7 @@ const Item = (props) => {
                 <div className="card-body">
                     <h5 className="card-title">{props.nombre}</h5>
                     <p className="card-text">Precio: ${props.precio}</p>
-                    <NavLink to="/producto" className="btn btn-dark">Ver detalles</NavLink>
+                    <NavLink to= {`/producto/${props.id}`} className="btn btn-dark">Ver detalles</NavLink>
                 </div>
             </div>
        

@@ -35,7 +35,7 @@ const ItemCount = (props) => {
            <div className="contador">
            <button onClick={restar}>-</button>
             <p>{count}</p>    
-            <button Classname="btn-toolbar" onClick={sumar}>+</button>
+            <button className="btn-toolbar" onClick={sumar}>+</button>
            </div>
 
            
@@ -52,7 +52,7 @@ const ItemCount = (props) => {
             draggable
             pauseOnHover 
             />
-            {/* Same as */}
+        
             <ToastContainer />
         </Fragment>
             
