@@ -50,3 +50,8 @@ const arr = [1,2,3]
 
 arr.map(()=>{})
 
+
+
+Contexto:
+Si queres leer o modificar el contexto, siempre usas 
+el hook

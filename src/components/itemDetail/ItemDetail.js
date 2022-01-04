@@ -3,13 +3,19 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import {contexto} from "../../contextFiles/CartContext";
+import {useContext} from "react";
 
 const ItemDetail = ({ prod }) => {
 
-  const [compra, setCompra] = useState(false);
+  const {addToCart} = useContext(contexto);
+
+  const [confirmar, setConfirmar] = useState(false);
   const [cantidad, setCantidad] = useState(0);
 
   const onAdd = (contador) => {
+
+    addToCart(contador, prod);
     toast.success('Items agregados al carrito: ' + contador, {
       theme: "dark",
       position: "top-right",
@@ -22,7 +28,7 @@ const ItemDetail = ({ prod }) => {
       className: "toast-success",
     });
     setCantidad(contador)
-    setCompra(true);
+    setConfirmar(true);
   };
 
   const onAddFail = () => {
@@ -47,7 +53,7 @@ const ItemDetail = ({ prod }) => {
         <p>{prod.descripcion}</p>
       </div>
       <img src={prod.img} alt={prod.nombre} />
-      {compra ? <NavLink to="/carrito"><button>Terminar compra</button></NavLink> : <ItemCount stock={10} initial={1} onAdd={onAdd} addFail={onAddFail} />}
+      {confirmar ? <NavLink to="/carrito"><button>Terminar compra</button></NavLink> : <ItemCount stock={10} initial={1} onAdd={onAdd} addFail={onAddFail} />}
       <ToastContainer />
     </div>
   );
