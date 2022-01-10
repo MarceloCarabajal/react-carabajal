@@ -1,3 +1,5 @@
+/* ESTILOS GLOBALES */
+
 * {
     margin: 0;
     padding: 0;
@@ -27,40 +29,9 @@ html, body {
 
 
 
-.contador {
-    border-style: hidden;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    align-content: center;
-    width: 150px;
-    }
 
-.contador button {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: none;
-    background-color: black;
-    color: #fff;
-    font-size: 1.5rem;
-    cursor: pointer;
-    }
 
-.contador button:hover {
-    background-color: gray;
-}
 
-.contador span {
-    display: flex;
-
-    font-size: 1.5rem;
-    }
-
-.count-button {
-    display: flex;
-    justify-content: space-around;
-}
 
 
 .nav-enlace {
@@ -118,3 +89,99 @@ nav {
 .icon-cart:hover {
     color: #fff;
 }
+
+.container-fluid {
+    display: flex;
+  }
+
+/* ESTILOS ITEM DETAIL*/
+.itemDetail {
+    margin: 0 auto;
+    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .details {
+    text-align: center;
+  }
+
+  .itemDetail button {
+    margin: 1rem 0.2rem;
+    border: none;
+  }
+
+
+  img {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .terminar-btn:hover {
+    background-color: gray;
+    color: black;
+}
+
+  
+  /* ESTILOS CONTADOR */
+
+  .contador {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+.contador {
+    border-style: hidden;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    width: 150px;
+    }
+
+.count-button button {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: none;
+    background-color: black;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    }
+
+.agregar-btn button {
+    border: none;
+    background-color: black;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.6rem;
+    border-radius: 1rem;
+}
+
+.terminar-btn {
+    background-color: black;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 1rem;
+  
+}
+
+.contador span {
+    font-size: 1.5rem;
+
+}
+
+.contador button:hover {
+    background-color: gray;
+    color: black
+}
+

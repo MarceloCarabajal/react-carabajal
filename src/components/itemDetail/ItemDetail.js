@@ -53,7 +53,7 @@ const ItemDetail = ({ prod }) => {
         <p>{prod.descripcion}</p>
       </div>
       <img src={prod.img} alt={prod.nombre} />
-      {confirmar ? <NavLink to="/carrito"><button>Terminar compra</button></NavLink> : <ItemCount stock={10} initial={1} onAdd={onAdd} addFail={onAddFail} />}
+      {confirmar ? <NavLink to="/carrito"><button className="terminar-btn">Terminar compra</button></NavLink> : <ItemCount stock={10} initial={1} onAdd={onAdd} addFail={onAddFail} />}
       <ToastContainer />
     </div>
   );

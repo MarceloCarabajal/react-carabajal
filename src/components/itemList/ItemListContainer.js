@@ -1,13 +1,20 @@
 import { Fragment, useState, useEffect} from "react";
 import ItemList from "./ItemList";
 import products from "../json/productos.json";
+import { useParams } from "react-router-dom";
 
 
 const ItemListContainer = (props) => {
 
     const [productos, setProductos] = useState([]);
+    const { categoria } = useParams()
 
-
+    if(categoria) {
+        console.log("productos por categoria")
+    }else {
+        console.log("todos los productos")
+    }
+    
 
     const Promesa = () => {
         return new Promise ((resolve, reject) => {
@@ -20,10 +27,13 @@ const ItemListContainer = (props) => {
 
     useEffect(() => {
         Promesa().then((products) => {
+            if(!categoria) {
             setProductos(products);
-            console.log(products);
+            }else {
+                setProductos(products.filter(producto => producto.categoria === categoria));
+            }
         })
-    }, []);
+    }, [categoria]);
 
     if (productos.length === 0) {
         return <h1>Cargando...</h1>

@@ -18,6 +18,7 @@ export const CustomProvider = ({children}) => {
     const addToCart = (contador, prod) => {  
         console.log("soy addToCart");
         console.log(contador,prod);
+        
         setCart ([...cart, {contador:contador, prod:prod}]);
     }
 
