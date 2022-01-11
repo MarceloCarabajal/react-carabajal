@@ -1,10 +1,10 @@
-import { useContext } from "react"
-import { contexto } from "../../contextFiles/CartContext"
+import { useContext } from "./contextFiles/CartContext";
+
 
 
 
 const Cart = () => {
-    const resultado = useContext(contexto);
+    const { cart, removeFromCart, emptyCart} = useContext();
     console.log(resultado);
 
     return (

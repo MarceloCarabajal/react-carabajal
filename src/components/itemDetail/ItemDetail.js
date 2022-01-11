@@ -3,7 +3,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import {contexto} from "../../contextFiles/CartContext";
+import {contexto} from "./components/contextFiles/CartContext";
 import {useContext} from "react";
 
 const ItemDetail = ({ prod }) => {
