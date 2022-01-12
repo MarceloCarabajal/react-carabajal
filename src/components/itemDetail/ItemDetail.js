@@ -3,12 +3,12 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import {contexto} from "./components/contextFiles/CartContext";
-import {useContext} from "react";
+import {contexto} from "../contextFiles/CartContext";
+import {useContexto} from "../contextFiles/CartContext";
 
 const ItemDetail = ({ prod }) => {
 
-  const {addToCart} = useContext(contexto);
+  const {addToCart} = useContexto();
 
   const [confirmar, setConfirmar] = useState(false);
   const [cantidad, setCantidad] = useState(0);
@@ -29,6 +29,7 @@ const ItemDetail = ({ prod }) => {
     });
     setCantidad(contador)
     setConfirmar(true);
+  
   };
 
   const onAddFail = () => {

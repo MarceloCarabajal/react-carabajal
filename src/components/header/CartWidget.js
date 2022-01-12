@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { contexto } from "./components/contextFiles/CartContext";
+import { contexto } from "../contextFiles/CartContext";
 
 
 

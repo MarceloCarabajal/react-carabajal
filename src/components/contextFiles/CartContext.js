@@ -1,7 +1,7 @@
 import { createContext, useState, useContext } from "react";
 
 
-const contexto = createContext()
+export const contexto = createContext()
 
 export const { Provider } = contexto
 
@@ -35,13 +35,19 @@ export const CustomProvider = ({children}) => {
         setCantidad(contador)
     }
 
-    const isInCart = () => {
+    const isInCart = (prod) => {
         const result = cart.find(item => item.id === prod.id);
         return result !== undefined;
     }
 
 
     const removeFromCart = (id) => {
+        //const copia = [...cart]
+        let carritoFiltrado = cart.filter =(prod)=>{
+            return (prod.id !== id)
+        }
+        
+
     };
 
     const emptyCart = () => {

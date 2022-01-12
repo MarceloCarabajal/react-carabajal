@@ -55,3 +55,9 @@ arr.map(()=>{})
 Contexto:
 Si queres leer o modificar el contexto, siempre usas 
 el hook
+
+
+
+FIREBASE:
+
+- Proyecto : es lo que te habilita a usar los servicio
