@@ -1,11 +1,9 @@
-import { useContexto } from "../contextFiles/CartContext";
-
-
+import { useContexto } from "../contextFiles/MyContext";
 
 
 const Cart = () => {
-    const { cart, removeFromCart, emptyCart} = useContexto();
-    console.log(cart, removeFromCart, emptyCart);
+    const { carrito, borrarDelCarrito, limpiarCarrito} = useContexto();
+    console.log(carrito, borrarDelCarrito, limpiarCarrito);
 
     return (
         <div>

@@ -28,9 +28,33 @@ html, body {
 }
 
 
+/* ITEM LIST CONTAINER */
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+
+
+}
+
+.contenedor p {
+    font-size: 1.5rem;
+    margin: 0.5rem;
+}
 
 
 
+/* ITEM */
+
+.item {
+    display: flex;
+    justify-content: center;
+}
 
 
 

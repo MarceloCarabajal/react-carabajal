@@ -16,9 +16,8 @@ const NavBar = () => {
         <button className="nav-button" onClick={hamburger}>Menú</button>
         <NavLink to="/" className="nav-enlace desapaece">MStar</NavLink>
         <NavLink to="/productos" className="nav-enlace desaparece">Productos</NavLink>
-        <NavLink to="/categoria/1" className="nav-enlace desaparece">Insumos</NavLink>
-        <NavLink to="categoria/2" className="nav-enlace desaparece">Hardwares</NavLink>
-        <NavLink to="/destacados/destacados" className="nav-enlace desaparece">Destacados</NavLink>
+        <NavLink to="/categoria/1" className="nav-enlace desaparece">Hardwares</NavLink>
+        <NavLink to="categoria/2" className="nav-enlace desaparece">Insumos</NavLink>
         <NavLink to="/carrito" className="nav-enlace desaparece"><CartWidget/></NavLink>
       </nav>
     );

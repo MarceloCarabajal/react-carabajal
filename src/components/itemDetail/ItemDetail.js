@@ -3,20 +3,19 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import {contexto} from "../contextFiles/CartContext";
-import {useContexto} from "../contextFiles/CartContext";
+import {useContexto} from "../contextFiles/MyContext";
 
 const ItemDetail = ({ prod }) => {
 
-  const {addToCart} = useContexto();
+  const {agregarAlCarrito} = useContexto();
 
   const [confirmar, setConfirmar] = useState(false);
   const [cantidad, setCantidad] = useState(0);
 
-  const onAdd = (contador) => {
+  const onAdd = ({cant}) => {
 
-    addToCart(contador, prod);
-    toast.success('Items agregados al carrito: ' + contador, {
+    agregarAlCarrito(cant, prod);
+    toast.success('Items agregados al carrito: ' + cant, {
       theme: "dark",
       position: "top-right",
       autoClose: 3000,
@@ -27,7 +26,7 @@ const ItemDetail = ({ prod }) => {
       progress: undefined,
       className: "toast-success",
     });
-    setCantidad(contador)
+    setCantidad(cant)
     setConfirmar(true);
   
   };

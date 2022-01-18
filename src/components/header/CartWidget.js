@@ -1,11 +1,10 @@
-import { useContext } from "react";
-import { contexto } from "../contextFiles/CartContext";
+import { useContexto } from "react";
 
 
 
 const CartWidget = () => {
 
-    const {cart} = useContext(contexto);
+    const {cart} = useContexto();
     console.log(cart);
 
     return (
