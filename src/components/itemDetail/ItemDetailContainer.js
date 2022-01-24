@@ -12,14 +12,12 @@ const ItemDetailContainer = () => {
   
   const getItem = () => {
     const promesa = new Promise((res, rej) => {
-      setTimeout(() => {
+      
         console.log(id);
         res(productos.find((prod) => prod.id === Number(id)));
         setLoading(false);
-      }, 2000);
     });
     promesa.then((prod) => {
-      console.log(prod);
       setSelected(prod);
     });
   }

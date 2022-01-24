@@ -1,30 +1,18 @@
-Node.js: Un entorno de desarrollo
-NPM: Node Package Manager
+JSX : Es una extension de JS que permite crear componentes de forma sencilla parecida a HTML
 
-WEBPACK: Bundler
-BABEL: Transpilador
-create-react-app: Crea una aplicacion de react
-
-Instalar programas auxiliares
-
-1) Instalo Node
-2) Instalo create-react-app (npm i -g create-react-app)
-
-3) Ejecuto create-react-app (create-react-app <nombre>)
-
-JSX: Es una extension de JS que permite crear componentes de forma sencilla
-parecida a HTML
-
-COMOPONENTES: Una funcion que siempre tiene un solo retorno, ya que su funcion principal Es
-dibujar un elemento en pantalla y todos arrancan en mayuscula
+COMPONENTES : Una funcion que siempre tiene un solo retorno , ya que su funcion principal es dibujar un elemento en pantalla y todos arrancan en mayuscula. 
 
 
-- Props: son parametros de una funcion
-- State: Son variables internas de un componente que si las modifico el componente se actualiza
+- Props : Son parametros de una funcion
+- State : Son variables internas de un componente que si las modifico el componente se actualiza
 - Ciclo de vida
 - Metodos de ciclo de vida
 
+
 mount
+-constructor
+-render
+-componentDidMount
 
 update
 -render
@@ -33,13 +21,86 @@ update
 unmount
 -componentWillUnmount
 
-HOOKS: Son funciones.
-- useState: 
 
-            useState()
 
-            useEffect(a,b)
 
+
+
+HOOKS : Son funciones .
+
+- useState : 
+
+        useState() : Nos permite tener un estado en un componente 
+            - Retorna un array con dos elementos
+            - El primer elemento es el valor de la variable
+            - El segundo elemento es una funcion que modifica el valor de la variable
+
+
+        useEffect() : Hace un efecto secundario por defecto siempre despues de cada render
+
+        useEffect(()=>{},[]) 
+
+
+
+
+setTimeout(()=>{
+    
+},2000)
+
+
+
+function foo(a){
+
+}
+
+
+
+
+foo(1)
+
+
+
+
+
+
+class App extends React.Component{
+
+    constuctor(){
+        super()
+        this.state = {
+            usuarios : [],
+            contador : 0,
+            toggle : false
+        }
+    }
+
+    componentDidMount(){
+
+    }
+
+    render(){
+        return (
+            <header>
+                {this.props.nombre}
+            </header>
+        )
+    }
+}
+
+
+const arr = [1,2,3,4,5]
+
+//[2,3,4,5,6]
+
+arr.map((elemento)=>{
+    return elemento + 1
+})
+
+
+warning
+
+
+comentarios
 
 
 
@@ -48,16 +109,222 @@ HOOKS: Son funciones.
 
 const arr = [1,2,3]
 
-arr.map(()=>{})
+const [uno,dos,tres] = arr
+
+const uno = arr[0]
+const dos = arr[1]
+const tres = arr[2]
 
 
 
-Contexto:
-Si queres leer o modificar el contexto, siempre usas 
-el hook
 
 
 
-FIREBASE:
 
-- Proyecto : es lo que te habilita a usar los servicio
+
+
+
+
+
+
+
+
+const obj = {
+    a:1,
+    b:2,
+    c:3
+}
+
+const {a,b,c} = obj
+
+const {a:a,b:b,c:c} = obj
+
+const a = obj.a
+const b = obj.b
+const c = obj.c
+
+
+
+
+OBJECT PROPERTY SHORTHAND
+
+const nombre = 'Juan'
+
+const persona = {
+    nombre : nombre
+}
+
+const persona = {
+    nombre 
+}
+
+
+
+
+
+
+const isInitialMount = useRef(true);
+
+useEffect(() => {
+  if (isInitialMount.current) {
+     isInitialMount.current = false;
+  } else {
+      // Your useEffect code here to be run on update
+  }
+});
+
+
+
+
+const i = setInterval(()=>{
+            console.log("Ping")
+        },1000)
+
+        return ()=>{
+            //console.log("Cleanup")
+            clearInterval(i)
+        } 
+
+
+
+
+
+        - contador 
+        - sass
+        - ciclo de vida
+
+
+
+react-router
+
+react-router-dom
+
+
+    BrowserRouter : History API
+    HashRouter : location.hash
+    StaticRouter : SSR (Server Side Rendering)
+
+react-router-native
+
+
+Pub/Sub
+
+
+
+
+CONTEXT : Es una forma de pasar informacion entre componentes sin necesidad de pasar props
+
+1 - Creas un contexto (createContext from "react")
+
+    const contexto = createContext()
+
+
+2 - Sacas el Provider del contexto que creaste en paso 1
+
+    const {Provider} = contexto
+
+
+3 - Podemos leer el contexto usando el hook useContext(contexto)
+
+    //AlgunComponente.js
+    const valorDelContexto = useContext(contexto)
+
+
+4 - Uso el Provider
+
+    <Provider value={?}>
+        <AlgunosComponentes />
+    </Provider>
+
+
+
+5 - 
+
+
+
+FIREBASE
+
+
+- Proyecto : Es lo que te habilita a usar los servicios
+        - Base de datos (Firestore)
+        - Autenticacion (Firebase Auth)
+        - Storage (Firebase Storage)
+        - Realtime Database (Firebase Realtime Database)
+        - Lambda Function 
+        - Hosting (Firebase Hosting)
+
+- App : El acceso externo a los servicios del proyecto
+
+- NoSQL : Not only SQL (No Relacional)
+
+- Base de datos : Es el lugar en donde se almacena la informacion
+
+- Collection : La entidad en donde se almacena la informacion por separado
+
+- Documents : { id : "" }
+
+
+SDK 
+
+npm i firebase 
+
+
+
+BASES DE DATOS
+
+ABM - CRUD
+
+ULR / IP
+
+HTTP : 80
+HTTPS : 443
+
+SERVIDOR / PUERTO
+
+
+RELACIONALES / SQL  
+
+BASE DE DATOS
+ENTIDAD / TABLA
+REGISTROS
+
+
+
+
+
+
+NO RELACIONALES / NoSQL
+
+BASE DE DATOS
+COLLECTIONS (Namespace)
+DOCUMENTS (Registros)
+
+VELOCIDAD
+
+
+
+
+getDocs(productosCollection)
+                .then((resultado) => {
+                    //restultado : seria una representacion de lo que hay en la base de datos segun esta consulta
+                    const docs = resultado.docs
+                    //De resultado nos interesaba docs que era un array con la representacion de los documentos
+                    const lista = docs.map((doc) => {
+                        //Sacas el id por un lado
+                        const id = doc.id
+                        //Sacas el resto de la informacion por el otro
+                        const data = doc.data()
+                        //Integras todo en un mismo objeto
+                        const producto = {
+                            id: id,
+                            ...data
+                        }
+                        //El objeto integrado lo devolves asi se crea el array ya bien formateado
+                        return producto
+                    })
+                    //Usas el array formateado como estado
+                    setLista(lista)
+                })
+                .catch((error) => {
+                    console.log(error)
+                })

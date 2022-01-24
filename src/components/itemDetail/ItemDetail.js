@@ -5,14 +5,14 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import {useContexto} from "../contextFiles/MyContext";
 
-const ItemDetail = ({ prod }) => {
+const ItemDetail = ( {prod} ) => {
 
   const {agregarAlCarrito} = useContexto();
 
   const [confirmar, setConfirmar] = useState(false);
   const [cantidad, setCantidad] = useState(0);
 
-  const onAdd = ({cant}) => {
+  const onAdd = (cant) => {
 
     agregarAlCarrito(cant, prod);
     toast.success('Items agregados al carrito: ' + cant, {

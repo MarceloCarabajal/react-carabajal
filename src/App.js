@@ -9,8 +9,8 @@ import CustomProvider from './components/contextFiles/MyContext'
 
 function App() {
   return (
-   <BrowserRouter>
-      <CustomProvider> 
+    <CustomProvider> 
+      <BrowserRouter>
         <NavBar />
         <div className="container-fluid">
         <Routes>
@@ -23,8 +23,8 @@ function App() {
           <Route path= "*" element={<h1>No existe la página</h1>}/>
         </Routes>
         </div>
-      </CustomProvider>
-   </BrowserRouter>
+      </BrowserRouter>
+  </CustomProvider>
   );
 }
 
