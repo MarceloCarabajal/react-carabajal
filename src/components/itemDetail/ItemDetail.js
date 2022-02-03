@@ -48,12 +48,12 @@ const ItemDetail = ( {prod} ) => {
   return (
     <div className="itemDetail">
       <div className="details">
-        <h2>{prod.nombre}</h2>
-        <p>${prod.precio}</p>
-        <p>{prod.descripcion}</p>
+        <h2>{prod.title}</h2>
+        <p>${prod.price}</p>
+        <p>{prod.description}</p>
       </div>
-      <img src={prod.img} alt={prod.nombre} />
-      {confirmar ? <NavLink to="/carrito"><button className="terminar-btn">Terminar compra</button></NavLink> : <ItemCount stock={10} initial={1} onAdd={onAdd} addFail={onAddFail} />}
+      <img src={prod.image} alt={prod.title} />
+      {confirmar ? <NavLink to="/carrito"><button className="terminar-btn">Ver Carrito</button></NavLink> : <ItemCount stock={10} initial={1} onAdd={onAdd} addFail={onAddFail} />}
       <ToastContainer />
     </div>
   );

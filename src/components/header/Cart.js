@@ -14,11 +14,11 @@ const Cart = () => {
                         {carrito.map(producto => {
                             return <li key={producto.id}>
                                         {producto.nombre} - ${producto.precio} - {producto.cantidad}
-                                        <button onClick={() => borrarDelCarrito(producto.id)}>Borrar</button> 
+                                        <button onClick={() => borrarDelCarrito(producto.id, producto.cantidad)}>Borrar</button> 
                                     </li>
                         })}
                     </ul>
-                    <button onClick={limpiarCarrito}>Limpiar Carrito</button>
+                    <button onClick={limpiarCarrito}>Finalizar Compra</button>
                 </div>
             ) :
                 <div>
