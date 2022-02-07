@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom"
 
 const Item = (props) => {
 
-    console.log("Item render")
     return (            
 
     

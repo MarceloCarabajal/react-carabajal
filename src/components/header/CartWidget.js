@@ -5,7 +5,6 @@ import { useContexto } from "../contextFiles/MyContext";
 const CartWidget = () => {
 
     const {cantidadTotal} = useContexto();
-    console.log(cantidadTotal);
 
     return (
         <div className="cart-widget">

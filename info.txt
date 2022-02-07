@@ -328,3 +328,9 @@ getDocs(productosCollection)
                 .catch((error) => {
                     console.log(error)
                 })
+
+
+
+BUILD: es como el npm start pero que me da el resultado final
+npm run build
+

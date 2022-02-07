@@ -1,7 +1,7 @@
 import Item from './Item'
 
 const ItemList = (props) => {
-    console.log(props)
+
 
     return(
         <div className="container-fluid">

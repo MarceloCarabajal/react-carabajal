@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail";
-import productos from "../json/productos.json";
+
 import { useParams } from "react-router-dom";
 import { db } from "../firebase/firebase";
 import { collection, doc, getDoc } from "firebase/firestore";
+import ReactLoading from 'react-loading';
 
 
 const ItemDetailContainer = () => {
@@ -13,26 +14,16 @@ const ItemDetailContainer = () => {
   const [selected, setSelected] = useState({});
   const [loading, setLoading] = useState(true);
   
-  // const getItem = () => {
-  //   const promesa = new Promise((res) => {
-
-  //       res(productos.find((prod) => prod.id === Number(id)));
-  //       setLoading(false);
-  //   });
-  //   promesa.then((prod) => {
-  //     setSelected(prod);
-  //   });
-  // }
 
   useEffect(() => {
-    // getItem()},[id])
+ 
     const productosCollection = collection(db, "productos");
     const refDoc = doc(productosCollection, id);
     getDoc(refDoc)
       .then((resultado) => {
-        setSelected(resultado.data());
+        setSelected({id: resultado.id, ...resultado.data()});
         setLoading(false);
-        
+
       })
       .catch((error) => {
 
@@ -41,7 +32,7 @@ const ItemDetailContainer = () => {
 
 
   if (loading) {
-    return <h1>Cargando...</h1>;
+    return <ReactLoading type={"spinningBubbles"} color={"#131313"} height={300} width={150} />
   } else {
     return <ItemDetail prod={selected} />;
   }
