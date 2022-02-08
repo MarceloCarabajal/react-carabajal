@@ -10,7 +10,7 @@ import { getDocs , query, collection, where } from "firebase/firestore";
 
 const ItemListContainer = (props) => {
       
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState();
     let [lista, setLista] = useState([]);
     const { id } = useParams()
     

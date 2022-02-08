@@ -1,30 +1,68 @@
 import React from 'react';
 import { useState } from 'react';
 import { useForm } from "react-hook-form";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { db } from "../firebase/firebase";
+import { useContexto } from "../contextFiles/MyContext";
 
 
-const Formulario = () => {
+
+const Form = () => {
+
+
+    const {carrito, limpiarCarrito, precioTotal} = useContexto();
 
     const { register, handleSubmit, formState: { errors } } = useForm();
 
+    const [name, setName] = useState("");
+
+    const [email, setEmail] = useState("");
+
+    const [phone, setPhone] = useState("");
+
+    const [idSale, setIdSale ] = useState("");
+
+    const [datos, setDatos] = useState({});
+
+
+
     const onSubmit = (data, e) => {
+        e.preventDefault();
         console.log(data);
-        e.target.reset();
+    }
+
+    const saveName = (e) => {
+        setName(e.target.value);
+    }
+
+    const saveEmail = (e) => {
+        setEmail(e.target.value);
+    }
+
+    const savePhone = (e) => {
+        setPhone(e.target.value);
+    }
+
+    const send = () => {
+
+        const ventasCollection = collection(db, "ventas")
+        addDoc(ventasCollection, {
+            buyer: {
+                nombre: name,
+                email: email,
+                telefono: phone 
+            },
+            items: carrito,
+            date: serverTimestamp(),
+            total: precioTotal
+            })
+            .then((resultado) => {
+                setIdSale(resultado.id)
+                limpiarCarrito()
+            })
     }
 
 
-    const [datos, setDatos] = useState({
-        nombre: "",
-        email: "",
-        telefono: "",
-    })
-
-    const handleInputChange = (e) => {
-        setDatos({
-            ...datos, 
-            [e.target.name]: e.target.value
-        })
-    }
 
   return <div>
       <h4>Opciones de Envío</h4>
@@ -36,7 +74,7 @@ const Formulario = () => {
                     className="form-control"
                     name="nombre"
                     placeholder="Nombre" 
-                    onChange={handleInputChange}
+             
                     {...register("nombre", {
                             required: { value: true, message: "El nombre es obligatorio" },
                             minLength: { value: 3, message: "El nombre debe tener al menos 3 caracteres" },
@@ -59,7 +97,7 @@ const Formulario = () => {
                     className="form-control" 
                     name="email"  
                     placeholder="Email" 
-                    onChange={handleInputChange}
+                   
                     {...register("email", {
                             required: { value: true, message: "El email es obligatorio" },
                             minLength: { value: 3, message: "El email debe tener al menos 3 caracteres" },
@@ -81,7 +119,7 @@ const Formulario = () => {
                     className="form-control" 
                     name="telefono" 
                     placeholder="Telefono" 
-                    onChange={handleInputChange}
+                    
                     {...register("telefono", {
                             required: { value: true, message: "El telefono es obligatorio" },
                             minLength: { value: 3, message: "El telefono debe tener al menos 3 caracteres" },
@@ -97,11 +135,11 @@ const Formulario = () => {
                 </span>
 
             </div>
-            <button className="btn btn-dark" >Validar datos</button>
+            <button className="btn btn-dark" onClick={send}>Finalizar compra</button>
 
         </form>
     </div>
 
 };
 
-export default Formulario;
+export default Form;

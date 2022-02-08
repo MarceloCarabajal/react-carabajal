@@ -1,33 +1,12 @@
 import { useContexto } from "../contextFiles/MyContext";
 import { NavLink } from "react-router-dom";
-import { addDoc, collection, serverTimestamp } from "firebase/firestore";
-import { db } from "../firebase/firebase";
-import Formulario from "./Formulario";
+
+import Formulario from "./Form";
 
 const Cart = () => {
 
     const { carrito, borrarDelCarrito, limpiarCarrito, precioTotal} = useContexto();
     
-    const finalizarCompra = () => {
-        console.log("Guardando la compra en db")
-
-        const ventasCollection = collection(db, "ventas")
-        addDoc(ventasCollection, {
-            buyer: {
-                nombre: "Juan",
-                apellido: "Perez",
-                email: "mail@mail.com"
-            },
-            items: carrito,
-            date: serverTimestamp(),
-            total: precioTotal
-            })
-            .then((resultado) => {
-                console.log(resultado)
-                limpiarCarrito()
-            })
-        }
-
     return (
         <div>
             <h1>Carrito</h1>
@@ -43,7 +22,6 @@ const Cart = () => {
                     </ul>
                     <h3>Total: ${precioTotal}</h3>
                     <Formulario />
-                    <button onClick={finalizarCompra}>Finalizar Compra</button>
                 </div>
             ) :
                 <div>
